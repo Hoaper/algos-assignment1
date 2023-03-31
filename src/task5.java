@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class task5 {
     public static int fib(int n) {
         return switch (n) {
@@ -7,9 +9,10 @@ public class task5 {
         };
     }
 
-    public static void main(String[] args) {
-        System.out.println(fib(5));   // 5
-        System.out.println(fib(17));  // 1597
-        System.out.println(fib(25));  // 75025
+    public static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please write a num:");
+        int n = sc.nextInt();
+        System.out.println("The fibonacci value is: " + fib(n));
     }
 }

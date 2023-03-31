@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class task3 {
     public static String checkPrime(int n) {
         if (n > 1) {
@@ -9,9 +11,10 @@ public class task3 {
             return "Composite";
         }
     }
-    public static void main(String[] args) {
-        System.out.println(checkPrime(4));   // Composite
-        System.out.println(checkPrime(23));  // Prime
-        System.out.println(checkPrime(26));  // Composite
+    public static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please write a num:");
+        int n = sc.nextInt();
+        System.out.println(n + " is " + checkPrime(n) + "!");
     }
 }

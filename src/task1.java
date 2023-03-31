@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class task1 {
     public static int findMin(int n, int[] arr) {
         int min = Integer.MAX_VALUE;
@@ -7,9 +9,14 @@ public class task1 {
         return min;
     }
 
-    public static void main(String[] args){
-        System.out.println(findMin(5, new int[]{-123,-2131,1223,-12313243, -32})); //-12313243
-        System.out.println(findMin(6, new int[]{-21,-23,1223,-1, -32, 4332}));     //-32
-        System.out.println(findMin(7, new int[]{12,-2, 1, 4, -32, -33, -34}));     //-34
+    public static void main(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please write a length of array:");
+        int n = sc.nextInt();
+        System.out.println("Write a " + n + " elements:");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+
+        System.out.println("The min value is: " + findMin(n, arr));
     }
 }

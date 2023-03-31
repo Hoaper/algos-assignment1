@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class task9 {
     public static int binCoefficient(int n, int k) {
         if (k == n) return 1;
@@ -8,8 +10,13 @@ public class task9 {
         };
     }
 
-    public static void main(String[] args) {
-        System.out.println(binCoefficient(2, 1));   // 2
-        System.out.println(binCoefficient(7, 3));   // 35
+    public static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please write a num for N:");
+        int n = sc.nextInt();
+        System.out.println("Please write a num for K:");
+        int k = sc.nextInt();
+
+        System.out.println("The binomial coefficient of n=" + n + " k=" + k +" is: " + binCoefficient(n, k));
     }
 }

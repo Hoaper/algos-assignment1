@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class task7 {
     public static void reverseArray(int[] arr) {
@@ -13,12 +14,14 @@ public class task7 {
         }
     }
 
-    public static void main(String[] args) {
-        int[] test1 = new int[]{1,2,3,4};
-        int[] test2 = new int[]{1,2,3,4,5,6};
-        reverseArray(test1);
-        reverseArray(test2);
-        System.out.println(Arrays.toString(test1));   // [4, 3, 2, 1]
-        System.out.println(Arrays.toString(test2));   // [6, 5, 4, 3, 2, 1]
+    public static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please write a length of array:");
+        int n = sc.nextInt();
+        System.out.println("Write a " + n + " elements:");
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        reverseArray(arr);
+        System.out.println("Your current arrays is: " + Arrays.toString(arr));
     }
 }
