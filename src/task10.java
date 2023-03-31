@@ -9,7 +9,7 @@ public class task10 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a num for a:");
         int a = sc.nextInt();
-        System.out.println("Please write a num for a:");
+        System.out.println("Please write a num for b:");
         int b = sc.nextInt();
 
         System.out.println("GCD is: " + euclidGCDAlgoReq(a, b));
