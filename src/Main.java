@@ -6,17 +6,38 @@ public class Main {
         System.out.print(">>> ");
         int task = sc.nextInt();
         switch (task) {
-            case -1: System.exit(0);
-            case 1: task1.main();
-            case 2: task2.main();
-            case 3: task3.main();
-            case 4: task4.main();
-            case 5: task5.main();
-            case 6: task6.main();
-            case 7: task7.main();
-            case 8: task8.main();
-            case 9: task9.main();
-            case 10: task10.main();
+            case -1:
+                System.exit(0);
+            case 1:
+                task1.main();
+                break;
+            case 2:
+                task2.main();
+                break;
+            case 3:
+                task3.main();
+                break;
+            case 4:
+                task4.main();
+                break;
+            case 5:
+                task5.main();
+                break;
+            case 6:
+                task6.main();
+                break;
+            case 7:
+                task7.main();
+                break;
+            case 8:
+                task8.main();
+                break;
+            case 9:
+                task9.main();
+                break;
+            case 10:
+                task10.main();
+                break;
             default:
                 System.out.println("Out choose task outside of the range!");
                 connectModuleFromPrompt();
