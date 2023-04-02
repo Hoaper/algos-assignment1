@@ -2,11 +2,10 @@ import java.util.Scanner;
 
 public class task1 {
     public static int findMin(int n, int[] arr) {
-        int min = Integer.MAX_VALUE;
-        for (int num: arr) {
-            if (num < min) min = num;
-        }
-        return min;
+        int a = arr[n-1];
+        if (n == 1) return a;
+        int otherMin = findMin(n-1, arr);
+        return a < otherMin ? a : otherMin;
     }
 
     public static void main(){
