@@ -1,9 +1,13 @@
 import java.util.Scanner;
 
 public class task2 {
+    public static float findSum(int n, int[] arr){
+        int a = arr[n-1];
+        if (n == 1) return a;
+        return a + findSum(n-1, arr);
+    }
     public static float findAverage(int n, int[] arr) {
-        float sm = 0f;
-        for (int num:arr) sm += num;
+        float sm = findSum(Integer.valueOf(n), arr);
         return sm/n;
     }
     public static void main() {
