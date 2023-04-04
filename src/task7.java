@@ -9,12 +9,13 @@ public class task7 {
         if (start < stop) {
             int temp = arr[start];
             arr[start] = arr[stop];
-            arr[stop] = temp;
-            reverse(arr, ++start, --stop);
+            arr[stop] = temp; //swapping edge elements
+            reverse(arr, ++start, --stop); //continue
         }
     }
 
     public static void main() {
+        // getting input
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a length of array:");
         int n = sc.nextInt();

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class task4 {
     public static int factorial(int n) {
-        if (n == 1) {
+        if (n == 1) { //base case
             return 1;
         } else {
             return n * factorial(n-1);
@@ -10,6 +10,7 @@ public class task4 {
     }
 
     public static void main() {
+        // getting input
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a number:");
         int n = sc.nextInt();

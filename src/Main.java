@@ -5,6 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print(">>> ");
         int task = sc.nextInt();
+        // load modules depending on user input
         switch (task) {
             case -1:
                 System.exit(0);
@@ -39,16 +40,16 @@ public class Main {
                 task10.main();
                 break;
             default:
+//                is something wrong with input - ask again
                 System.out.println("Out choose task outside of the range!");
                 connectModuleFromPrompt();
         }
 
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Hello, Teacher! Please, choose task number to check:");
         for(int i = 1; i<=10; i++) System.out.println(i + ") Task " + i);
-        System.out.println("Type -1 to exit");
+        System.out.println("Type -1 to exit"); // printing tasks for selecting
         connectModuleFromPrompt();
     }
 }

@@ -108,8 +108,8 @@ public static int fib(int n) {
 ```java
 public static int power(int base, int power) {
     return switch (power) {
-        case 1 -> base;
         case 0 -> 1;
+        case 1 -> base;
         default -> base * power(base, power-1);
     };
 }

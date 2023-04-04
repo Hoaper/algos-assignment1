@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class task2 {
     public static float findSum(int n, int[] arr){
         int a = arr[n-1];
-        if (n == 1) return a;
-        return a + findSum(n-1, arr);
+        if (n == 1) return a; //base case
+        return a + findSum(n-1, arr); //summing all numbers of array
     }
     public static float findAverage(int n, int[] arr) {
         float sm = findSum(Integer.valueOf(n), arr);
         return sm/n;
     }
     public static void main() {
+        // getting input
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a length of array:");
         int n = sc.nextInt();
