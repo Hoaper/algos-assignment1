@@ -1,7 +1,11 @@
 # Assignment1 Documentation
-Glad to see you on my assignment1 repository here would be explained a lot of things about tasks :shipit:
+Glad to see you on my Assignment1 repository here would be explained a lot of things about tasks :shipit:
 
-## :heavy_plus_sign: Task 1 (src)[src/task1.java]
+## Main.java file
+**It's the entry-point  class that connect CLI with modules of solved tasks.**
+**Below will be described every function that used to solve problems.**
+
+## :heavy_plus_sign: Task 1 [module src](src/task1.java)
 **Description**: *Return the minimum value of an array*
 
 **Explanation**: Base case: `n=1`, then we return the first element of the array
@@ -17,7 +21,7 @@ public static int findMin(int n, int[] arr) {
 }
 ```
 
-## :heavy_plus_sign: Task 2
+## :heavy_plus_sign: Task 2 [module src](src/task2.java)
 **Description**: *Return average value of array*
 
 **Explanation**: I have divided the task into 2 functions.
@@ -38,7 +42,7 @@ public static float findAverage(int n, int[] arr) {
 }
 ```
 
-## :heavy_plus_sign: Task 3
+## :heavy_plus_sign: Task 3 [module src](src/task3.java)
 **Description**: *Check a number for a prime*
 
 **Explanation**: It can be understood that the numbers coming after the root of the number will be divided by the numbers that go before the root of the number.
@@ -59,7 +63,7 @@ public static String checkPrime(int n) {
 }
 
 ```
-## :heavy_plus_sign: Task 4
+## :heavy_plus_sign: Task 4 [module src](src/task4.java)
 **Description**: *Return factorial number*
 
 **Explanation**: Base condition: `n=1`, then we `return 1` (the 1st element in the sequence). Otherwise: multiply the current number by the factorial of the number by one less
@@ -75,7 +79,7 @@ public static int factorial(int n) {
 }
 ```
 
-## :heavy_plus_sign: Task 5
+## :heavy_plus_sign: Task 5 [module src](src/task5.java)
 **Description**: *Return the number on n-th position of fibonacci sequence*
 
 **Explanation**: Two basic conditions: `n=0` and `n=1`, then we return the corresponding values.
@@ -92,7 +96,7 @@ public static int fib(int n) {
 }
 ```
 
-## :heavy_plus_sign: Task 6
+## :heavy_plus_sign: Task 6 [module src](src/task6.java)
 **Description**: *Return base in power n*
 
 **Explanation**: Base case: `base=1` or `base=0`. 
@@ -111,7 +115,7 @@ public static int power(int base, int power) {
 }
 ```
 
-## :heavy_plus_sign: Task 7
+## :heavy_plus_sign: Task 7 [module src](src/task7.java)
 **Description**: *Reverse an array*
 
 **Explanation**: We increasing `start` and dicreasing `stop` variables and swap elements of array by `start` and `stop` indexes while `start < stop`. Where base `start=0`, `stop=arr.length-1`
@@ -131,7 +135,7 @@ public static void reverse(int[] arr, int start, int stop) {
 }
 ```
 
-## :heavy_plus_sign: Task 8
+## :heavy_plus_sign: Task 8 [module src](src/task8.java)
 **Description**: *Check is provided string is integer*
 
 **Explanation**: 
@@ -165,34 +169,37 @@ static boolean isNum(String s) {
 }
 ```
 
-## :heavy_plus_sign: Task 9
-**Description**: *Return the minimum value of an array*
+## :heavy_plus_sign: Task 9 [module src](src/task9.java)
+**Description**: *Return binomial coefficient of `n` and `k` params*
 
-**Explanation**: Base case: `n=1`, then we return the first element of the array
-Otherwise, we compare the `arr[n-1]` element with the recursive execution of the function to which `n=n-1` is passed and return lesser
+**Explanation**: Base cases: 
+- `k=n` we always return 1
+- `k=0` we also return 1;
+- Otherwise we return sum of functions recoursivly with (`n-1`, `k-1`) and (`n-1`, `k`) params;
 
 **Solution**:
 ```java
-public static int findMin(int n, int[] arr) {
-        int a = arr[n-1];
-        if (n == 1) return a;
-        int otherMin = findMin(n-1, arr);
-        return a < otherMin ? a : otherMin;
+public static int binCoefficient(int n, int k) {
+    if (k == n) return 1;
+    
+    return switch (k) {
+        case 0 -> 1;
+        default -> binCoefficient(n-1, k-1) + binCoefficient(n-1, k);
+    };
 }
 ```
 
-## :heavy_plus_sign: Task 10
-**Description**: *Return the minimum value of an array*
+## :heavy_plus_sign: Task 10 [module src](src/task10.java)
+**Description**: *Return GCD of `a` and `b`*
 
-**Explanation**: Base case: `n=1`, then we return the first element of the array
-Otherwise, we compare the `arr[n-1]` element with the recursive execution of the function to which `n=n-1` is passed and return lesser
+**Explanation**: Base case: `b=0`, then we return a; Otherwise we call recursivly function with (`b`, `a % b`)
+- Why does it work?
+  - We made a loop of condition: `while b != 0` we replace `a` with `b` and `b` with `a % b` - common devisor
 
 **Solution**:
 ```java
-public static int findMin(int n, int[] arr) {
-        int a = arr[n-1];
-        if (n == 1) return a;
-        int otherMin = findMin(n-1, arr);
-        return a < otherMin ? a : otherMin;
+public static int euclidGCDAlgoReq(int a, int b) {
+    if (b == 0) return a;
+    return euclidGCDAlgoReq(b, a % b);
 }
 ```
