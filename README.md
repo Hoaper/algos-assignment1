@@ -191,7 +191,7 @@ public static int binCoefficient(int n, int k) {
 
 ## :heavy_plus_sign: Task 10 [module src](src/task10.java)
 **Description**: *Return GCD of `a` and `b`*
-
+**Source from web: [link](https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/)**
 **Explanation**: Base case: `b=0`, then we return a; Otherwise we call recursivly function with (`b`, `a % b`)
 - Why does it work?
   - We made a loop of condition: `while b != 0` we replace `a` with `b` and `b` with `a % b` - common devisor
