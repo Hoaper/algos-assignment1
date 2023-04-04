@@ -1,7 +1,7 @@
 # Assignment1 Documentation
 Glad to see you on my Assignment1 repository here would be explained a lot of things about tasks :shipit:
 
-## Main.java file [module src](src/Main.java)
+## Main.java file [src](src/Main.java)
 **It's the entry-point  class that connect CLI with modules of solved tasks.**
 **Below will be described every function that used to solve problems.**
 
