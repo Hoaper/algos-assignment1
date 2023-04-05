@@ -1,12 +1,24 @@
 import java.util.Scanner;
 
 public class task2 {
-    public static float findSum(int n, int[] arr){
+    /*
+        @ getSum              - definition of sum function
+        @   n                 - length of arrya
+        @   arr               - array of numbers to sum
+        @ return              - returning sum of array
+    */
+    public static float getSum(int n, int[] arr){
         int a = arr[n-1];
         if (n == 1) return a; //base case
         return a + findSum(n-1, arr); //summing all numbers of array
     }
-    public static float findAverage(int n, int[] arr) {
+    /*
+        @getAverage          - definition of average function
+        @  n                 - lenght of array
+        @  arr               - array of numbers t ofind average
+        @return              - returning average of array
+    */
+    public static float getAverage(int n, int[] arr) {
         float sm = findSum(Integer.valueOf(n), arr);
         return sm/n;
     }
@@ -19,6 +31,6 @@ public class task2 {
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
 
-        System.out.println("The average value is: " + findAverage(n, arr));
+        System.out.println("The average value is: " + getAverage(n, arr));
     }
 }
