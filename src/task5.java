@@ -1,7 +1,12 @@
 import java.util.Scanner;
 
 public class task5 {
-    public static int fib(int n) {
+    /*
+        @getFib       - definition of min
+        @   n         - n-th place of number on fibonacci sequence
+        @return       - returning n-th number on fibonacci seq
+    */
+    public static int getFib(int n) {
         return switch (n) {
             case 0 -> 0; // base case
             case 1 -> 1; // base case
@@ -14,6 +19,6 @@ public class task5 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a num:");
         int n = sc.nextInt();
-        System.out.println("The fibonacci value is: " + fib(n));
+        System.out.println("The fibonacci value is: " + getFib(n));
     }
 }
