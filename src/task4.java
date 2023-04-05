@@ -10,7 +10,7 @@ public class task4 {
         if (n == 1) { //base case
             return 1;
         } else {
-            return n * factorial(n-1);
+            return n * getFactorial(n-1);
         }
     }
 
