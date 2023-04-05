@@ -2,9 +2,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class task7 {
+    /*
+        @reverseArray      - definition of functon
+        @  arr             - array to be reversed
+        @return            - None  
+    */
     public static void reverseArray(int[] arr) {
         reverse(arr, 0, arr.length-1);
     }
+    /*
+        @reverse       - definition of function
+        @  arr         - array to be reversed
+        @  start       - start index notation
+        @  stop        - stop index notation
+        @return        - None
+    */
     public static void reverse(int[] arr, int start, int stop) {
         if (start < stop) {
             int temp = arr[start];
