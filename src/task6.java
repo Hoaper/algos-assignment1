@@ -5,7 +5,7 @@ public class task6 {
         @getPower      - definition of min
         @  base        - number that need to be multiplied 'power' times
         @  power       - count of iterations
-        @return        - returning factized n
+        @return        - returning powered base in power
     */
     public static int getPower(int base, int power) {
         return switch (power) {
