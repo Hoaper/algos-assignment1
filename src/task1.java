@@ -1,10 +1,16 @@
 import java.util.Scanner;
 
 public class task1 {
-    public static int findMin(int n, int[] arr) {
+    /*
+        @ getMin - definition of min
+        @   n - lenght of array
+        @   arr - array
+        @ return - returning minimum of function
+    */
+    public static int getMin(int n, int[] arr) {
         int a = arr[n-1]; //get element of array in n-1 index
         if (n == 1) return a;
-        int otherMin = findMin(n-1, arr); // move with n-1 length
+        int otherMin = getMin(n-1, arr); // move with n-1 length
         return a < otherMin ? a : otherMin; //return lesser
     }
 
@@ -17,6 +23,6 @@ public class task1 {
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
 
-        System.out.println("The min value is: " + findMin(n, arr));
+        System.out.println("The min value is: " + getMin(n, arr));
     }
 }
