@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class task6 {
     /*
-        @getPower      - definition of min
+        @getPower      - definition of power function
         @  base        - number that need to be multiplied 'power' times
         @  power       - count of iterations
         @return        - returning powered base in power

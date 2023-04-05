@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class task5 {
     /*
-        @getFib       - definition of min
+        @getFib       - definition of fibonacci finder function
         @   n         - n-th place of number on fibonacci sequence
         @return       - returning n-th number on fibonacci seq
     */
@@ -10,7 +10,7 @@ public class task5 {
         return switch (n) {
             case 0 -> 0; // base case
             case 1 -> 1; // base case
-            default -> fib(n - 1) + fib(n - 2); // fibonacci sequence rule
+            default -> getFib(n - 1) + getFib(n - 2); // fibonacci sequence rule
         };
     }
 

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class task4 {
     /*
-        @getFactorial - definition of min
+        @getFactorial - definition of factorial function
         @   n         - number that need to be factorized
         @return       - returning factized n
     */

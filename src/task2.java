@@ -10,7 +10,7 @@ public class task2 {
     public static float getSum(int n, int[] arr){
         int a = arr[n-1];
         if (n == 1) return a; //base case
-        return a + findSum(n-1, arr); //summing all numbers of array
+        return a + getSum(n-1, arr); //summing all numbers of array
     }
     /*
         @getAverage          - definition of average function
@@ -19,7 +19,7 @@ public class task2 {
         @return              - returning average of array
     */
     public static float getAverage(int n, int[] arr) {
-        float sm = findSum(Integer.valueOf(n), arr);
+        float sm = getSum(Integer.valueOf(n), arr);
         return sm/n;
     }
     public static void main() {

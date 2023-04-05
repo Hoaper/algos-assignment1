@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class task7 {
     /*
-        @reverseArray      - definition of functon
+        @reverseArray      - definition of function
         @  arr             - array to be reversed
         @return            - None  
     */
