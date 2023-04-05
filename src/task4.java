@@ -1,7 +1,12 @@
 import java.util.Scanner;
 
 public class task4 {
-    public static int factorial(int n) {
+    /*
+        @getFactorial - definition of min
+        @   n         - number that need to be factorized
+        @return       - returning factized n
+    */
+    public static int getFactorial(int n) {
         if (n == 1) { //base case
             return 1;
         } else {
@@ -15,6 +20,6 @@ public class task4 {
         System.out.println("Please write a number:");
         int n = sc.nextInt();
 
-        System.out.println("The factorial is: " + factorial(n));
+        System.out.println("The factorial is: " + getFactorial(n));
     }
 }
