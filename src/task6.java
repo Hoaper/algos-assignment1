@@ -1,11 +1,17 @@
 import java.util.Scanner;
 
 public class task6 {
-    public static int power(int base, int power) {
+    /*
+        @getPower      - definition of min
+        @  base        - number that need to be multiplied 'power' times
+        @  power       - count of iterations
+        @return        - returning factized n
+    */
+    public static int getPower(int base, int power) {
         return switch (power) {
             case 0 -> 1;    // base case
             case 1 -> base; // base case
-            default -> base * power(base, power-1); //multiply base power times from input
+            default -> base * getPower(base, power-1); //multiply base power times from input
         };
     }
 
@@ -17,6 +23,6 @@ public class task6 {
         System.out.println("Please write a power:");
         int power = sc.nextInt();
 
-        System.out.println("The " + base + "^" + power + "=" + power(base, power));
+        System.out.println("The " + base + "^" + power + "=" + getPower(base, power));
     }
 }
